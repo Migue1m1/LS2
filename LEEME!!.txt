@@ -1,0 +1,74 @@
+----------------------------Universidad Nacional Experimental de Guayana------------------------------
+------------------------------------------------Ls2---------------------------------------------------
+------------------------------------- Fase: Graficador -----------------------------------------------
+-- Profesores Diego Mosquera y Luis Astorga.
+-- By: Miguel Guevara
+El analizador léxico devuelve los tokens.
+EL analizador sintáctico la estructura de datos.
+El analizador semántico convierte dicha estructura
+            y devuelve las trazas para el graficador,
+            además de evaluar la coherencia en el código.
+
+En esta fase semántica se evalúa:
+	* Pasos : [x >= 0]
+	* Ángulo: [0 <= x <= 90]
+	* Posición incial: [0 <= angle <= 180]
+        * Asignación de tipos:
+                    Acepta: "c:Real Valor 1.0", tipos correctos
+                   Rechaza: "c:Ent Valor 1.0", tipos distintos
+	* Declaración de variables:
+		* No se permiten declaraciones repetidas de variables,
+                  es decir, una variable se declara una sola vez.
+	        * En caso de declararse una variable más de una vez,
+                  se emite un error.
+        * Variables no declaradas:
+                * No se aceptan variables no declaradas en los
+                  movimientos, ni en la matriz ni en la generatriz.
+                  Ej:
+			   .
+			simbolo X
+			   .
+			   .
+			#F--$--#F--$--#F--$--#F //Acepta, pero
+			   .
+			   .
+			#F--$--#H--$--#F--$--#F //Rechaza, ya que H no está definida.
+
+                  El mismo caso aplica para los parámetros!
+
+	* Probabilidades: Sumatoria de probabilidades de las generatrices = 1.0
+                          En caso contrario, rechaza!
+	* Las generatrices deben estar una debajo de otra sin separadores de línea.
+                          Al incluir un separador de línea entre generatrices
+		          causa conflicto Shitf/Reduce.
+		  Ej:   //Se acepta
+			generatriz
+			F ->
+			#F--$--#F--&--#F--&--#F--#F--$--#F--$--#F--&--#
+			X ->
+			#F--$--#F--$--#F--$--#
+
+
+			//Falla
+			generatriz
+			F ->
+			#F--$--#F--&--#F--&--#F--#F--$--#F--$--#F--&--#
+
+			X ->
+			#F--$--#F--$--#F--$--#
+
+	* Se trató de centrar la figura, pero el cálculo para ello requiere de conocer
+          las dimensiones exactas de la figura generada, influyendo el tiempo de entrega
+          en su no resolución.
+	* El tamaño de las figuras debe ser inversamente proporcional al número de pasos,
+          pero la proporción de algunas figuras disminuía demasiado, razón por la cual
+          no se aplicó el cambio. (Atributo segmento, a la hora de convertir de movs a trazas)
+        * Cabe destacar que la fase semántica se realizó sin gramática de atributos, lo
+	  que dificultó mucho el trabajo debido a la imposibilidad de usar atributos
+          sintetizados y heredados. Tomar en cuenta para próximas versiones del curso!
+	* Algunas funciones semánticas están dentro del esquema de traducción.
+	  Otras se incluyeron en el semántico, como lookUpV, validM, addSymbolV, etc.
+	* Se lleva el control de errores de la fase sintáctica devolviendo la 
+	  fila, columna y token aproximado que genera el error.
+
+
