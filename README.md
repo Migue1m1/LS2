@@ -14,6 +14,17 @@ the growth processes of plant development.
 L-systems have also been used to model the morphology of a variety of organisms 
 and can be used to generate self-similar fractals such as iterated function systems.
 
+## About the Project
+
+This project is about an Interpreter of a subset of L-Systems. 
+Consists of Lexical, Syntax and Semantic phases of an Interpreter.
+
+LexLs2.x    -> Lexical analysis using Alex (Lexer).
+ParserLs2.y -> Syntax analysis using Happy (Parser).
+SemLs2.hs   -> Semantic analysis.
+Main.hs     -> Main file that calls the previous.
+Examples    -> Program Examples.
+
 ## Getting Started
 
 Run on Linux using next syntax...
@@ -28,6 +39,11 @@ You need install:
 
 * [Ubuntu](https://www.ubuntu.com/) or another Linux distro.
 * [Haskell](https://www.haskell.org/)
+
+## Compiler Tools
+
+* [Alex](https://www.haskell.org/alex/)
+* [Happy](https://www.haskell.org/happy/)
 
 ## ScreenShots
 
