@@ -30,7 +30,7 @@ Consists of Lexical, Syntax and Semantic phases of an Interpreter.
 Run on Linux using next syntax...
 
 ```
-runhaskell Main.hs yourfile.ls2
+runhaskell Main.hs examples/figure_file.ls2
 ```
 
 ## Prerequisites
