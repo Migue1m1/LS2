@@ -13,12 +13,8 @@ import qualified Data.Map as M
 ------------------------------------------------Ls2---------------------------------------------------
 --------------------------------------Fase: Analisis Semantico----------------------------------------
 -- Profesores Diego Mosquera y Luis Astorga.
--- Alumnos
---        Miguel Guevara.   CI 25693142
---        Jessika Carvajal. CI 24179295
---        Isrrael Maita.    CI 19621016
---        Jaussman Sanchez. CI 23871616
---19-03-17
+-- By: Miguel Guevara
+-- 19-03-17
 
 -- SECCIÓN DE TIPOS
 -- Tipo del trazado gráfico

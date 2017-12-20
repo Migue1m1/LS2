@@ -19,11 +19,11 @@ and can be used to generate self-similar fractals such as iterated function syst
 This project is about an Interpreter of a subset of L-Systems. 
 Consists of Lexical, Syntax and Semantic phases of an Interpreter.
 
-LexLs2.x    -> Lexical analysis using Alex (Lexer).
-ParserLs2.y -> Syntax analysis using Happy (Parser).
-SemLs2.hs   -> Semantic analysis.
-Main.hs     -> Main file that calls the previous.
-Examples    -> Program Examples.
+* LexLs2.x    -> Lexical analysis using Alex (Lexer).
+* ParserLs2.y -> Syntax analysis using Happy (Parser).
+* SemLs2.hs   -> Semantic analysis.
+* Main.hs     -> Main file that calls the previous.
+* Examples    -> Program Examples.
 
 ## Getting Started
 

@@ -6,12 +6,8 @@ module LexLs2 (Token(..), lexer) where
 ------------------------------------------------Ls2---------------------------------------------------
 --------------------------------------Fase: Analisis Lexico-------------------------------------------
 -- Profesores Diego Mosquera y Luis Astorga.
--- Alumnos
---        Miguel Guevara.   CI 25693142
---        Jessika Carvajal. CI 24179295
---        Isrrael Maita.    CI 19621016
---        Jaussman Sanchez. CI 23871616
---24-01-17
+-- By: Miguel Guevara
+-- 24-01-17
 %wrapper "posn"
 --Expresiones regulares
 $dig   = [1-9]
